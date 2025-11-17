@@ -16,11 +16,12 @@
    3.4 [Documentación de ingeniería](#34-desarrollo-de-documentación-de-ingeniería)  
       3.4.1 [Arquitectura de red actual](#341-arquitectura-de-red-actual)  
       3.4.2 [Arquitectura de red futura](#342-arquitectura-de-red-futura)  
-      3.4.3 [Listado de direcciones IP](#343-listado-de-direcciones-ip-futura)  
-      3.4.4 [Plano Topográfico](#344-plano-topográfico-de-rack01-industrial)  
-      3.4.5 [Plano Multifilar](#345-plano-multifilar-de-rack01-industrial)  
-      3.4.6 [Plano Unifilar](#346-plano-unifilar-de-rack01-industrial)  
-4. [Conclusiones](#4-conclusiones)
+      3.4.3 [LayOut de Fibra y Datos](#343-layout-de-fibra-y-datos)  
+      3.4.4 [Listado de direcciones IP](#344-listado-de-direcciones-ip-futura)  
+      3.4.5 [Plano Topográfico](#345-plano-topográfico-de-rack01-industrial)  
+      3.4.6 [Plano Multifilar](#346-plano-multifilar-de-rack01-industrial)  
+      3.4.7 [Plano Unifilar](#347-plano-unifilar-de-rack01-industrial)  
+5. [Conclusiones](#4-conclusiones)
 
 ---
 
@@ -99,19 +100,42 @@ El diseño contempla los siguientes lineamientos principales:
 - Reserva y estandarización de rangos de direcciones IP, facilitando la administración de equipos actuales y la escalabilidad futura.
 - Preparación de la infraestructura para la incorporación de un SCADA centralizado, que permita la supervisión y control remoto de los procesos.  
 
-#### 3.4.3 Listado de direcciones IP futura  
+#### 3.4.3 LayOut de Fibra y Datos
+<p align="center">
+  <img width="7021" height="4967" alt="image" src="https://github.com/user-attachments/assets/f02b255a-936e-4599-b8b3-4f09fb3f8574" />
+  <br>
+  <em>Figura 5: Plano de LayOut Fibra y Datos - General </em>
+</p>
+
+<p align="center">
+  <img width="7021" height="4967" alt="image" src="https://github.com/user-attachments/assets/14a49630-35f2-4489-bc02-da88d58aab43" />
+  <br>
+  <em>Figura 6: Plano de LayOut Fibra y Datos - Línea 1 </em>
+</p>
+
+El plano de layout de fibra y datos tiene como finalidad representar la ubicación de los equipos de control, los nodos de red, el tendido de canalización eléctrico y de red. Este documento, a su vez permite visualizar la conexión entre el SW1 de la sala de control y SW2 en el dataroom de IT.
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1iRkG6oH8LjWPPpsK3aPpfcn-yNCVLFaQ/view?usp=sharing">
+    <img width="1427" height="797" alt="(TOR) Red Industrial - Tendido Aéreo" src="https://github.com/user-attachments/assets/b65061e2-900b-4a8b-8bfa-1dd22fdc722a" />
+  </a>
+<p align="center">
+  <em>Haz clic en la imagen para ver el video de (TOR) Red Industrial - Tendido Aéreo.</em>
+</p>
+
+#### 3.4.4 Listado de direcciones IP futura  
 <p align="center">
   <img width="1481" height="797" alt="Listado de direcciones IP futura" src="https://github.com/user-attachments/assets/d825cc14-d948-4641-8392-9fc044bd188e" />
   <br>
-  <em>Figura 5: Listado de direcciones IP futura </em>
+  <em>Figura 7: Listado de direcciones IP futura </em>
 </p>
 Este listado detalla las direcciones IP asignadas a los distintos dispositivos de la red industrial, con el objetivo de estandarizar la asignación y facilitar la administración, mantenimiento y escalabilidad de la red.  
 
-#### 3.4.4 Plano Topográfico de Rack01 industrial   
+#### 3.4.5 Plano Topográfico de Rack01 industrial   
 <p align="center">
   <img width="2482" height="1755" alt="(TOR) Topográfico - Rack  01 _rev1" src="https://github.com/user-attachments/assets/95a421aa-32f9-4179-b37f-8d0d0c1fa024" />
   <br>
-  <em>Figura 6: (TOR) Topográfico - Rack [01] </em>
+  <em>Figura 8: (TOR) Topográfico - Rack [01] </em>
 </p>
 
 #### Componentes del Rack  
@@ -141,14 +165,14 @@ Este listado detalla las direcciones IP asignadas a los distintos dispositivos d
 <p align="center">
   <img width="449" height="565" alt="image" src="https://github.com/user-attachments/assets/c82d99e2-8203-4548-9b5a-19f2ea6dc1c2" />
   <br>
-  <em>Figura 7: Rack [01] </em>
+  <em>Figura 9: Rack [01] </em>
 </p>
 
-#### 3.4.5 Plano Multifilar de Rack01 industrial  
+#### 3.4.6 Plano Multifilar de Rack01 industrial  
 <p align="center">
   <img width="2482" height="1755" alt="(TOR) Multifilar de Rack" src="https://github.com/user-attachments/assets/efcd2b53-b9b5-4bb0-afc3-8704dbc2a0dc" />
   <br>
-  <em>Figura 8: Plano Multifilar de Rack01 industrial </em>
+  <em>Figura 10: Plano Multifilar de Rack01 industrial </em>
 </p>
 
 El plano multifilar elaborado para el rack industrial refleja la distribución de protecciones, garantizando que cada circuito esté correctamente dimensionado en relación con la carga prevista y a la sección de los conductores instalados.  
@@ -164,14 +188,14 @@ De esta manera, cada protección se seleccionó en función de la potencia real 
 
 En la instalación se seleccionó un interruptor diferencial 25A-30 mA, en conjunto con un interruptor termomagnético general de 20 A. Esta configuración asegura la correcta coordinación entre protecciones, ya que el disyuntor diferencial no tiene función de protección contra sobrecorriente, sino contra fugas a tierra, mientras que la limitación de corriente queda a cargo del interruptor termomagnético. Al disponer un térmico de 20A aguas arriba, se garantiza que el diferencial de 25A no sea sobrecargado, manteniendo la seguridad tanto del cableado como de los equipos conectados, y asegurando la protección de las personas frente a contactos indirectos mediante la sensibilidad de 30 mA.
 
-#### 3.4.6 Plano Unifilar de Rack01 industrial  
+#### 3.4.7 Plano Unifilar de Rack01 industrial  
 <p align="center">
   <img width="2482" height="1755" alt="(TOR) Unifilar de Rack" src="https://github.com/user-attachments/assets/931a9de6-dc55-4890-8f0d-f70f509420d3" />
   <br>
-  <em>Figura 9: Plano Unifilar de Rack01 industrial </em>
+  <em>Figura 11: Plano Unifilar de Rack01 industrial </em>
 </p>
 
-### 3.4.7 Documentación estándar 
+### 3.4.8 Documentación estándar 
 Finalmente, se generó documentación estándar que servirá como referencia para futuros proyectos de redes industriales dentro de la empresa.
 
 ---
